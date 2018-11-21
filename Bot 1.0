@@ -1,0 +1,24 @@
+# Discord bot by Maxxey
+
+import discord
+from discord.ext.commands import Bot
+from discord.ext import commands
+import asyncio
+import time
+
+Client = discord.Client()
+client = commands.Bot(command_prefix = ">")
+
+
+@client.event
+async def on_ready():
+    print("Bot ist ready wie ein Caddy")
+
+@client.event
+async def on_message(message):
+    if message.content == "Grinder":
+        await client.send_message(message.channel, " so wie Tony Hawk")
+
+
+
+client.run("NTE0ODI3OTg0NzA0NjM0ODgw.DtcRuA.TSiu7aaM48cPE5HUTHYsEgO5fKY")
